@@ -27,13 +27,12 @@ const Content = styled.div`
 `;
 
 function ContentCard({ data }) {
-   const { title, description, link, cover } = data;
    return (
       <Card>
-         <Image src={cover} alt='project_cover' loading='lazy' />
+         <Image src={data?.cover} alt='project_cover' loading='lazy' />
          <Content>
-            <Typography variant='h6'>{title}</Typography>
-            <Typography variant='subtitle2'>{description}</Typography>
+            <Typography variant='h6'>{data?.title}</Typography>
+            <Typography variant='subtitle2'>{data?.description}</Typography>
          </Content>
       </Card>
    );
