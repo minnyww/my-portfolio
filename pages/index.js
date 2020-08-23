@@ -1,65 +1,91 @@
-import Head from 'next/head'
-import styles from '../styles/Home.module.css'
+import { useEffect, useState } from 'react';
+import Head from 'next/head';
+import Typography from '@material-ui/core/Typography';
+import styled, { createGlobalStyle } from 'styled-components';
+import ContentCard from './components/ContentCard';
+
+const GlobalStyle = createGlobalStyle`
+  body {
+    min-height: 100vh;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100vw;
+    max-width: 600px;
+    margin: 0 auto;
+    background : #fff;
+
+    /* background-image: url(${(props) => props.bgimage && props.bgimage}); */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.09);
+  }
+`;
+
+const Container = styled.div`
+   padding: 18px;
+`;
+
+const Image = styled.img`
+   max-width: 70%;
+   width: 100%;
+   margin: 0 auto;
+   display: block;
+   padding: 16px;
+`;
 
 export default function Home() {
-  return (
-    <div className={styles.container}>
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+   const [greetingTime, setGreetingTime] = useState('');
 
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
+   useEffect(() => {
+      const d = new Date();
+      const time = d.getHours();
 
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
+      if (time < 12) {
+         setGreetingTime('Good morning!');
+      }
+      if (time > 12) {
+         setGreetingTime('Good afternoon!');
+      }
+      if (time == 12) {
+         setGreetingTime('Good eat lunch!');
+      }
+   }, []);
 
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
+   const PROJECT_LIST = [
+      {
+         title: `thai chana let's go`,
+         description:
+            'เป็น Project ที่ทำขึ้นมาเพื่อเอาไว้ Checkin เข้าสถานที่ต่างๆ',
+         cover:
+            'https://cdn.dribbble.com/users/931459/screenshots/4696538/18.png',
+         link: 'http://thaichana-checkin.web.app/',
+      },
+      {
+         title: `Mental Health Survey`,
+         description: 'เป็นเว็บไซต์ทำ Survey สำหรับบุคลากรในโรงพยาบาล',
+         cover:
+            'https://cdn.dribbble.com/users/79571/screenshots/4918556/illustrations.png',
+         link: 'https://pnkcovidst-5.web.app/',
+      },
+   ];
 
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div>
-      </main>
-
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
-        </a>
-      </footer>
-    </div>
-  )
+   return (
+      <>
+         <Container>
+            <GlobalStyle bgimage='https://cdn.dribbble.com/users/729829/screenshots/3894287/galshir-autumn-morning.png' />
+            <Head>
+               <title>Apisit Portfolio</title>
+            </Head>
+            <Typography variant='h4'>Hi, {greetingTime}</Typography>
+            <Image
+               src='https://cdn.dribbble.com/users/103909/screenshots/5964957/welcome-preview-01_4x.png?compress=1&resize=800x600'
+               alt='greeting_cover'
+               loading='lazy'
+            />
+            <Typography variant='h5'>My Projects</Typography>
+            {PROJECT_LIST.map((project) => (
+               <ContentCard data={project} key={project.title} />
+            ))}
+         </Container>
+      </>
+   );
 }
