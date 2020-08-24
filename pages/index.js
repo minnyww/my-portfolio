@@ -25,7 +25,7 @@ export default function Home() {
          <Head>
             <title>Apisit Portfolio</title>
          </Head>
-         <MainContent PROJECT_LIST={PROJECT_LIST} greetingTime={greetingTime} />
+         <MainContent greetingTime={greetingTime} />
       </>
    );
 }
