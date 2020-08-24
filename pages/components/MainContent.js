@@ -10,7 +10,24 @@ const Image = styled.img`
    padding: 16px;
 `;
 
-const MainContent = ({ PROJECT_LIST, greetingTime }) => {
+const PROJECT_LIST = [
+   {
+      title: `thai chana let's go`,
+      description:
+         'เป็น Project ที่ทำขึ้นมาเพื่อเอาไว้ Checkin เข้าสถานที่ต่างๆ',
+      cover: 'https://cdn.dribbble.com/users/931459/screenshots/4696538/18.png',
+      link: 'http://thaichana-checkin.web.app/',
+   },
+   {
+      title: `Mental Health Survey`,
+      description: 'เป็นเว็บไซต์ทำ Survey สำหรับบุคลากรในโรงพยาบาล',
+      cover:
+         'https://cdn.dribbble.com/users/79571/screenshots/4918556/illustrations.png',
+      link: 'https://pnkcovidst-5.web.app/',
+   },
+];
+
+const MainContent = ({ greetingTime }) => {
    return (
       <>
          <Typography variant='h4'>Hi, {greetingTime}</Typography>
