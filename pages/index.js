@@ -28,7 +28,6 @@ export default function Home({ PROJECT_LIST }) {
          setGreetingTime('Good eat lunch!');
       }
    }, []);
-   console.log('PROJECT_LIST : ', PROJECT_LIST);
 
    return (
       <>
