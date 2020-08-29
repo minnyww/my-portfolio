@@ -30,7 +30,7 @@ const Content = styled.div`
 function ContentCard({ data, onClickCard }) {
    return (
       <Card onClick={() => onClickCard(data.pid)}>
-         <Image src={data?.cover} alt='project_cover' loading='lazy' />
+         <Image src={data?.cover} alt='project_cover' />
          <Content>
             <Typography variant='h6'>{data?.title}</Typography>
             <Typography variant='subtitle2'>{data?.cardDescription}</Typography>

@@ -27,25 +27,4 @@ export default class MyDocument extends Document {
          sheet.seal();
       }
    }
-
-   render() {
-      return (
-         <Html>
-            <Head>
-               <link
-                  rel='stylesheet'
-                  href='https://fonts.googleapis.com/icon?family=Material+Icons&display=swap'
-               />
-               {/* <link
-                  href='https://fonts.googleapis.com/css2?family=Prompt&display=swap'
-                  rel='stylesheet'
-               /> */}
-            </Head>
-            <body>
-               <Main />
-               <NextScript />
-            </body>
-         </Html>
-      );
-   }
 }

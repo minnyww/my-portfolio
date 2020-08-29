@@ -41,13 +41,13 @@ export default React.memo(function BottomNav() {
             style={{ color: 'white' }}
             label='Home'
             value='/'
-            icon={<Icon style={{ color: 'white' }}>home</Icon>}
+            icon={<img src='/home.svg' width={20} alt='home_icon' />}
          />
          <BottomNavigationAction
             style={{ color: 'white' }}
             label='About Me'
             value='/me'
-            icon={<Icon style={{ color: 'white' }}>info</Icon>}
+            icon={<img src='/info.svg' width={20} alt='info_icon' />}
          />
       </Footer>
    );
