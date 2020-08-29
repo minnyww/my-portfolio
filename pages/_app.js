@@ -34,8 +34,8 @@ function MyApp({ Component, pageProps }) {
          </Head>
          <Container>
             <Component {...pageProps} />
-            <BottomNav />
          </Container>
+         <BottomNav />
       </ThemeProvider>
    );
 }

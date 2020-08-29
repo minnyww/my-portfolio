@@ -6,11 +6,11 @@ import Icon from '@material-ui/core/Icon';
 import styled from 'styled-components';
 
 const Footer = styled(BottomNavigation)`
-   position: fixed !important;
+   position: fixed;
    bottom: 0;
+   height: 50px;
    width: 100%;
    max-width: 600px;
-   justify-content: space-evenly;
    background-color: #6057ff !important;
 
    .MuiBottomNavigationAction-root.Mui-selected {
@@ -24,14 +24,13 @@ export default React.memo(function BottomNav() {
    const pathValue = router?.pathname.replace('/', '');
 
    useEffect(() => {
-      setNavValue(pathValue);
+      setNavValue(pathValue === 'me' ? '/' + pathValue : '/');
    }, [pathValue]);
 
    return (
       <Footer
          value={navValue}
-         onChange={(event, newValue) => {
-            console.log('newValue : ', newValue);
+         onChange={(_, newValue) => {
             setNavValue(newValue);
             router.push(newValue);
          }}
@@ -46,7 +45,7 @@ export default React.memo(function BottomNav() {
          <BottomNavigationAction
             style={{ color: 'white' }}
             label='About Me'
-            value='me'
+            value='/me'
             icon={<Icon style={{ color: 'white' }}>info</Icon>}
          />
       </Footer>

@@ -1,0 +1,33 @@
+[
+   {
+      "pid": "1",
+      "title": "thai chana let`s go",
+      "cardDescription": "เป็น Project ที่ทำขึ้นมาเพื่อเอาไว้ Checkin เข้าสถานที่ต่างๆ",
+      "description": "เป็น Project ที่ทำขึ้นมาเพื่อเอาไว้ Checkin เข้าสถานที่ต่างๆ โดยที่ผู้ใช้ไม่จำเป็นต้องเปิดกล้องขึ้นมาเพื่อแสกน และผู้ใช้ยังสามารถเพิ่มสถานที่ของตัวเองเข้าไป โดยการนำลิ้งที่ได้จากการแสกนเข้าสถานที่ครั้งแรกมาเพิ่มใส่ในเว็บไซต์ของเรา",
+      "cover": "https://cdn.dribbble.com/users/931459/screenshots/4696538/18.png",
+      "fullCover": "https://firebasestorage.googleapis.com/v0/b/chayen.appspot.com/o/resume-file%2FfullCoverThaichana.png?alt=media&token=554e9cc0-a782-4a49-b17b-1c4ceada34d1",
+      "link": "http://thaichana-checkin.web.app/"
+   },
+   {
+      "pid": "2",
+      "title": "Mental Health Survey",
+      "cardDescription": "เป็นเว็บไซต์ทำ Survey สำหรับบุคลากรในโรงพยาบาล",
+      "description": "เป็นโปรเจ็คที่จัดทำขึ้นให้กับโรงพยาบาลพระนั่งเกล้า เป็นเว็บไซต์สำหรับให้บุลคลากรในโรงพยาบาลมาทำแบบสอบถามเกี่ยวกับความเครียดเกี่ยวกับสถานการณ์ Covid 19",
+      "cover": "https://cdn.dribbble.com/users/79571/screenshots/4918556/illustrations.png",
+      "fullCover": "https://firebasestorage.googleapis.com/v0/b/chayen.appspot.com/o/resume-file%2Fpnk5fullCover.PNG?alt=media&token=dbce5f99-ed5b-47c7-b052-f73d173f1932",
+      "link": "https://pnkcovidst-5.web.app/"
+   },
+   {
+      "pid": "3",
+      "title": "Line Bot",
+      "cardDescription": "เป็น Bot ที่จัดทำขึ้นมาเพื่อการศึกษาของตัวเอง",
+      "description": "เป็น Bot ที่จัดทำขึ้นมาเพื่อการศึกษาของตัวเอง มีความสามารถ detect ตัวหนังสือ หรือ Logo จากรูปที่ผู้ใช้ส่งเข้าไปได้, สามารถแปลภาษาอังกฤษเป็นไทย โดยการพิม `แปล Hello` เป็นต้น, แล้วก็สามารถคุยเล่นกับบอทได้ด้วยเช่นกัน  ",
+      "cover": "https://static.dribbble.com/users/1204750/screenshots/4015227/frame__2_.png",
+      "moreImage": [
+         "https://firebasestorage.googleapis.com/v0/b/chayen.appspot.com/o/resume-file%2Fchatbot.PNG?alt=media&token=0c9d826e-486a-4089-a6e3-b6f67ffe0a64",
+         "https://firebasestorage.googleapis.com/v0/b/chayen.appspot.com/o/resume-file%2Fsmalltalk.PNG?alt=media&token=baed87b9-390a-4929-88d9-923c7eafe1eb"
+      ],
+      "fullCover": "https://firebasestorage.googleapis.com/v0/b/chayen.appspot.com/o/resume-file%2Fchayen.png.jpg?alt=media&token=8fc34599-44ab-437b-9a82-28f8370d0fbe",
+      "link": ""
+   }
+]

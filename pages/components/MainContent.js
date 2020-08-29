@@ -1,9 +1,10 @@
 import Typography from '@material-ui/core/Typography';
 import ContentCard from '../components/ContentCard';
 import styled from 'styled-components';
+import { useRouter } from 'next/router';
 
 const Image = styled.img`
-   max-width: 70%;
+   max-width: 50%;
    width: 100%;
    margin: 0 auto;
    display: block;
@@ -11,25 +12,15 @@ const Image = styled.img`
 `;
 
 const MainContent = ({ greetingTime }) => {
-   const PROJECT_LIST = [
-      {
-         title: `thai chana let's go`,
-         description:
-            'เป็น Project ที่ทำขึ้นมาเพื่อเอาไว้ Checkin เข้าสถานที่ต่างๆ',
-         cover:
-            'https://cdn.dribbble.com/users/931459/screenshots/4696538/18.png',
-         link: 'http://thaichana-checkin.web.app/',
-      },
-      {
-         title: `Mental Health Survey`,
-         description: 'เป็นเว็บไซต์ทำ Survey สำหรับบุคลากรในโรงพยาบาล',
-         cover:
-            'https://cdn.dribbble.com/users/79571/screenshots/4918556/illustrations.png',
-         link: 'https://pnkcovidst-5.web.app/',
-      },
-   ];
+   const router = useRouter();
+   const PROJECT_LIST = require('../projectList.json');
+
+   const handleOnClickCard = (pid) => {
+      router.push(`/project-detail/${pid}`);
+   };
+
    return (
-      <>
+      <div style={{ paddingBottom: '3rem' }}>
          <Typography variant='h4'>Hi, {greetingTime}</Typography>
          <Image
             src='https://cdn.dribbble.com/users/103909/screenshots/5964957/welcome-preview-01_4x.png?compress=1&resize=800x600'
@@ -38,9 +29,13 @@ const MainContent = ({ greetingTime }) => {
          />
          <Typography variant='h5'>My Projects</Typography>
          {PROJECT_LIST.map((project) => (
-            <ContentCard data={project} key={project.title} />
+            <ContentCard
+               data={project}
+               key={project.title}
+               onClickCard={handleOnClickCard}
+            />
          ))}
-      </>
+      </div>
    );
 };
 
