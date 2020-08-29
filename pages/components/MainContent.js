@@ -16,9 +16,8 @@ const Image = styled.img`
    padding: 16px;
 `;
 
-const MainContent = ({ greetingTime }) => {
+export default function MainContent({ greetingTime, PROJECT_LIST }) {
    const router = useRouter();
-   const PROJECT_LIST = require('../projectList.json');
 
    const handleOnClickCard = (pid) => {
       router.push(`/project-detail/${pid}`);
@@ -52,6 +51,4 @@ const MainContent = ({ greetingTime }) => {
          ))}
       </div>
    );
-};
-
-export default MainContent;
+}

@@ -20,12 +20,7 @@ const MoreImage = styled.img`
    padding: 1rem;
 `;
 
-export default function ProjectDetail() {
-   const { query } = useRouter();
-   const PROJECT_LIST = require('../projectList.json');
-   const currentProject = PROJECT_LIST.find(
-      (project) => project.pid === query.pid,
-   );
+export default function ProjectDetail({ currentProject }) {
    if (!currentProject) return 'Loading...';
 
    const { title, fullCover, description, moreImage } = currentProject;
@@ -50,4 +45,27 @@ export default function ProjectDetail() {
          </MoreImageContainer>
       </React.Fragment>
    );
+}
+
+export async function getStaticPaths() {
+   return {
+      paths: [
+         { params: { pid: '1' } },
+         { params: { pid: '2' } },
+         { params: { pid: '3' } },
+      ],
+      fallback: false,
+   };
+}
+
+export async function getStaticProps({ params }) {
+   const PROJECT_LIST = require('../projectList.json');
+   const currentProject = PROJECT_LIST.find(
+      (project) => project.pid === params.pid,
+   );
+   return {
+      props: {
+         currentProject,
+      },
+   };
 }

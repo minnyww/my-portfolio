@@ -7,7 +7,7 @@ import styled from 'styled-components';
 //    padding: 18px;
 // `;
 
-export default function Home() {
+export default function Home({ PROJECT_LIST }) {
    const [greetingTime, setGreetingTime] = useState('');
 
    useEffect(() => {
@@ -30,7 +30,16 @@ export default function Home() {
          <Head>
             <title>Apisit Portfolio</title>
          </Head>
-         <MainContent greetingTime={greetingTime} />
+         <MainContent greetingTime={greetingTime} PROJECT_LIST={PROJECT_LIST} />
       </>
    );
+}
+
+export async function getStaticProps() {
+   const PROJECT_LIST = require('./projectList.json');
+   return {
+      props: {
+         PROJECT_LIST,
+      },
+   };
 }
