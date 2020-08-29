@@ -26,7 +26,7 @@ export default function Experience() {
                <TimelineConnector />
             </TimelineSeparator>
             <TimelineContent>
-               Senior Project (React,Express,Maria DB, Digital Ocean, Space)
+               Senior Project (React,Express,Maria DB, Digital Ocean)
             </TimelineContent>
          </TimelineItem>
          <TimelineItem>
