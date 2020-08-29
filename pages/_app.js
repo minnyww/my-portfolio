@@ -4,6 +4,8 @@ import { ThemeProvider } from 'styled-components';
 import styled, { createGlobalStyle } from 'styled-components';
 import Head from 'next/head';
 
+export const config = { amp: true };
+
 const BottomNav = dynamic(() => import('./components/BottomNav'), {
    loading: () => <p>Loadin BottomNav...</p>,
 });
