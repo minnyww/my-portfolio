@@ -36,7 +36,12 @@ function MyApp({ Component, pageProps }) {
                name='viewport'
                content='initial-scale=1.0, width=device-width'
             />
-            <meta property='og:title' content='Apisit Portfolio' key='title' />
+            <meta name='description' content='Apisit Portfolio' />
+            <meta
+               property='og:title'
+               content='Min - Apisit Portfolio'
+               key='title'
+            />
             <meta
                property='og:image'
                content='https://firebasestorage.googleapis.com/v0/b/chayen.appspot.com/o/resume-file%2Fresume.png?alt=media&token=e09346ea-3750-44f9-9f7b-b80e8663892c'
