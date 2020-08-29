@@ -44,6 +44,10 @@ export default class MyDocument extends Document {
                   rel='preconnect'
                   href='https://static.dribbble.com/users/1204750/screenshots/4015227/frame__2_.png'
                />
+               <script
+                  charset='utf-8'
+                  src='https://static.line-scdn.net/liff/edge/2/sdk.js'
+               ></script>
                {/* <link
                   href='https://fonts.googleapis.com/css2?family=Prompt&display=swap'
                   rel='stylesheet'

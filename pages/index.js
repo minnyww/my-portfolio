@@ -1,6 +1,9 @@
 import dynamic from 'next/dynamic';
 import { useEffect, useState } from 'react';
 import Head from 'next/head';
+// import liff from '@line/liff';
+
+// const liff = window.liff;
 
 const MainContent = dynamic(() => import('./components/MainContent'), {
    loading: () => <p>Loadin MainContent...</p>,
@@ -8,6 +11,19 @@ const MainContent = dynamic(() => import('./components/MainContent'), {
 
 export default function Home({ PROJECT_LIST }) {
    const [greetingTime, setGreetingTime] = useState('');
+
+   // useEffect(() => {
+   //    window.addEventListener('load', () => {
+   //       const liff = window.liff;
+   //       liff.init({ liffId: '1653775837-mwbxbjNB' }, async () => {
+   //          if (!liff.isLoggedIn()) {
+   //             liff.login();
+   //          } else if (liff.isLoggedIn()) {
+   //             console.log('profile : ', await liff.getProfile());
+   //          }
+   //       });
+   //    });
+   // }, []);
 
    useEffect(() => {
       const d = new Date();
