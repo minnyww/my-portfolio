@@ -19,6 +19,7 @@ const GlobalStyle = createGlobalStyle`
     margin: 0 auto;
     background : #fff;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.09);
+    /* font-family: Prompt, sans-serif !important; */
   }
 `;
 
@@ -31,10 +32,6 @@ function MyApp({ Component, pageProps }) {
       <ThemeProvider theme={{}}>
          <GlobalStyle />
          <Head>
-            <link
-               rel='stylesheet'
-               href='https://fonts.googleapis.com/icon?family=Material+Icons'
-            />
             <meta
                name='viewport'
                content='initial-scale=1.0, width=device-width'
