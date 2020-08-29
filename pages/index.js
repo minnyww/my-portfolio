@@ -13,15 +13,16 @@ export default function Home({ PROJECT_LIST }) {
       const d = new Date();
       const time = d.getHours();
 
-      if (time < 12) {
-         setGreetingTime('Good morning!');
-      }
-      if (time > 12) {
-         setGreetingTime('Good afternoon!');
-      }
-      if (time == 12) {
-         setGreetingTime('Good eat lunch!');
-      }
+      const date = new Date();
+      let hours = date.getHours();
+      let status =
+         hours < 12
+            ? 'Good Morning'
+            : hours <= 18 && hours >= 12
+            ? 'Good Afternoon'
+            : 'Good Night';
+
+      setGreetingTime(status);
    }, []);
 
    return (
