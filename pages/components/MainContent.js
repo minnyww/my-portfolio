@@ -42,11 +42,7 @@ export default function MainContent({ greetingTime, PROJECT_LIST }) {
    return (
       <div style={{ paddingBottom: '3rem' }}>
          <Typography variant='h4'>Hi, {greetingTime}</Typography>
-         <Image
-            src='https://cdn.dribbble.com/users/103909/screenshots/5964957/welcome-preview-01_4x.png?compress=1&resize=800x600'
-            alt='greeting_cover'
-            loading='lazy'
-         />
+         <Image src='/welcome_pic.webp' alt='greeting_cover' loading='lazy' />
          <Typography variant='h5'>My Projects</Typography>
          {PROJECT_LIST.map((project) => (
             <ContentCard

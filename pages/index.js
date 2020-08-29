@@ -5,11 +5,6 @@ import Head from 'next/head';
 const MainContent = dynamic(() => import('./components/MainContent'), {
    loading: () => <p>Loadin MainContent...</p>,
 });
-// import styled from 'styled-components';
-
-// const Container = styled.div`
-//    padding: 18px;
-// `;
 
 export default function Home({ PROJECT_LIST }) {
    const [greetingTime, setGreetingTime] = useState('');

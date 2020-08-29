@@ -1,8 +1,8 @@
 import '../styles/globals.css';
 import dynamic from 'next/dynamic';
+import Head from 'next/head';
 import { ThemeProvider } from 'styled-components';
 import styled, { createGlobalStyle } from 'styled-components';
-import Head from 'next/head';
 
 const BottomNav = dynamic(() => import('./components/BottomNav'), {
    loading: () => <p>Loadin BottomNav...</p>,
