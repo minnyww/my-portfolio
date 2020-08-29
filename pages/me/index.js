@@ -135,7 +135,8 @@ function Me() {
                            action: {
                               type: 'uri',
                               label: 'action',
-                              uri: 'https://apisit-min.com/',
+                              uri:
+                                 'https://apisit-min.com/?openExternalBrowser=1',
                            },
                         },
                      },
