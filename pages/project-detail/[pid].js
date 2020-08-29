@@ -62,7 +62,7 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-   const PROJECT_LIST = require('../projectList.json');
+   const PROJECT_LIST = require('../../public/projectList.json');
    const currentProject = PROJECT_LIST.find(
       (project) => project.pid === params.pid,
    );

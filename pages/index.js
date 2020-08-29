@@ -36,7 +36,7 @@ export default function Home({ PROJECT_LIST }) {
 }
 
 export async function getStaticProps() {
-   const PROJECT_LIST = require('./projectList.json');
+   const PROJECT_LIST = require('../public/projectList.json');
    return {
       props: {
          PROJECT_LIST,
