@@ -34,7 +34,7 @@ export default class MyDocument extends Document {
             <Head>
                <link
                   rel='stylesheet'
-                  href='https://fonts.googleapis.com/icon?family=Material+Icons'
+                  href='https://fonts.googleapis.com/icon?family=Material+Icons&display=swap'
                />
                {/* <link
                   href='https://fonts.googleapis.com/css2?family=Prompt&display=swap'
