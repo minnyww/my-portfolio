@@ -44,10 +44,23 @@ function Me() {
             Front-End Developer
          </Typography>
          <Typography
-            variant='subtitle1'
+            variant='subtitle2'
             style={{ textAlign: 'center', color: '#706767' }}
          >
             Github : <a href='https://github.com/minnyww'>minnywww</a>
+         </Typography>
+         <Typography
+            variant='subtitle2'
+            style={{ textAlign: 'center', color: '#706767' }}
+         >
+            Tel : <a href='tel:0909514409'>0909514409</a>
+         </Typography>
+         <Typography
+            variant='subtitle2'
+            style={{ textAlign: 'center', color: '#706767' }}
+         >
+            Email :{' '}
+            <a href='mailto:minrrverse@gmail.com'>minrrverse@gmail.com</a>
          </Typography>
          <Typography
             variant='h5'
