@@ -19,6 +19,12 @@ const Image = styled.img`
 export default function MainContent({ greetingTime, PROJECT_LIST }) {
    const router = useRouter();
 
+   if (!PROJECT_LIST) {
+      return (
+         <Typography variant='subtitle1'>Cannot Get Project Data</Typography>
+      );
+   }
+
    const handleOnClickCard = (pid) => {
       router.push(`/project-detail/${pid}`);
    };
@@ -31,7 +37,7 @@ export default function MainContent({ greetingTime, PROJECT_LIST }) {
 
    useEffect(() => {
       prefetchAllContent();
-   }, []);
+   }, [PROJECT_LIST]);
 
    return (
       <div style={{ paddingBottom: '3rem' }}>
