@@ -1,4 +1,4 @@
-import { useRouter } from 'next/router';
+import Head from 'next/head';
 import { Typography } from '@material-ui/core';
 import styled from 'styled-components';
 
@@ -26,6 +26,9 @@ export default function ProjectDetail({ currentProject }) {
    const { title, fullCover, description, moreImage } = currentProject;
    return (
       <React.Fragment>
+         <Head>
+            <title>{title}</title>
+         </Head>
          <Typography variant='h5'>{title}</Typography>
          <CoverProject src={fullCover} loading='lazy' alt='project_cover' />
          <Typography variant='subtitle1' style={{ textIndent: '2rem' }}>
