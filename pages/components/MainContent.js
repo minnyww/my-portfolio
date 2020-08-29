@@ -42,7 +42,7 @@ export default function MainContent({ greetingTime, PROJECT_LIST }) {
    return (
       <div style={{ paddingBottom: '3rem' }}>
          <Typography variant='h4'>Hi, {greetingTime}</Typography>
-         <Image src='/welcome_pic.webp' alt='greeting_cover' />
+         <Image src='/welcome_pic.jpg' alt='greeting_cover' />
          <Typography variant='h5'>My Projects</Typography>
          {PROJECT_LIST.map((project) => (
             <ContentCard

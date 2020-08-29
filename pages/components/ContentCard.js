@@ -15,7 +15,7 @@ const Card = styled.div`
 `;
 
 const Image = styled.img`
-   height: auto;
+   height: 100px;
    max-width: 100px;
    object-fit: cover;
    margin-right: 1rem;
