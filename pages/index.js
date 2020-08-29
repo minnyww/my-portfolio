@@ -20,7 +20,7 @@ export default function Home({ PROJECT_LIST }) {
             ? 'Good Morning'
             : hours <= 18 && hours >= 12
             ? 'Good Afternoon'
-            : 'Good Night';
+            : 'Good Evening';
 
       setGreetingTime(status);
    }, []);
