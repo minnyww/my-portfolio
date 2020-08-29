@@ -9,18 +9,18 @@ import Typography from '@material-ui/core/Typography';
 import styled from 'styled-components';
 
 const BaseTimeLine = styled(Timeline)`
-   /* .MuiTimelineItem-missingOppositeContent:before {
-      display: none !important;
-   } */
+   .MuiTimelineItem-missingOppositeContent:before {
+      content: none !important;
+   }
 `;
 
 export default function Experience() {
    return (
       <BaseTimeLine>
          <TimelineItem>
-            <TimelineOppositeContent>
+            {/* <TimelineOppositeContent>
                <Typography color='textSecondary'>Senior Project</Typography>
-            </TimelineOppositeContent>
+            </TimelineOppositeContent> */}
             <TimelineSeparator>
                <TimelineDot />
                <TimelineConnector />
@@ -30,9 +30,9 @@ export default function Experience() {
             </TimelineContent>
          </TimelineItem>
          <TimelineItem>
-            <TimelineOppositeContent>
+            {/* <TimelineOppositeContent>
                <Typography color='textSecondary'>2019</Typography>
-            </TimelineOppositeContent>
+            </TimelineOppositeContent> */}
             <TimelineSeparator>
                <TimelineDot />
                <TimelineConnector />
@@ -42,9 +42,9 @@ export default function Experience() {
             </TimelineContent>
          </TimelineItem>
          <TimelineItem>
-            <TimelineOppositeContent>
+            {/* <TimelineOppositeContent>
                <Typography color='textSecondary'>2019 - now</Typography>
-            </TimelineOppositeContent>
+            </TimelineOppositeContent> */}
             <TimelineSeparator>
                <TimelineDot color='primary' />
             </TimelineSeparator>
