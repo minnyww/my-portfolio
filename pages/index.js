@@ -1,6 +1,10 @@
+import dynamic from 'next/dynamic';
 import { useEffect, useState } from 'react';
 import Head from 'next/head';
-import MainContent from './components/MainContent';
+
+const MainContent = dynamic(() => import('./components/MainContent'), {
+   loading: () => <p>Loadin MainContent...</p>,
+});
 // import styled from 'styled-components';
 
 // const Container = styled.div`
