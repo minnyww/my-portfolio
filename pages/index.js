@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import Head from 'next/head';
 import MainContent from './components/MainContent';
-import styled from 'styled-components';
+// import styled from 'styled-components';
 
 // const Container = styled.div`
 //    padding: 18px;
