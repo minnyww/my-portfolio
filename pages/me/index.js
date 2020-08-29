@@ -1,8 +1,15 @@
 import Head from 'next/head';
+import dynamic from 'next/dynamic';
 import Typography from '@material-ui/core/Typography';
-import Experience from '../components/Experience';
-import Skill from '../components/Skill';
 import styled from 'styled-components';
+
+const Experience = dynamic(() => import('../components/Experience'), {
+   loading: () => <p>Loadin Experience...</p>,
+});
+
+const Skill = dynamic(() => import('../components/Skill'), {
+   loading: () => <p>Loadin Skill...</p>,
+});
 
 const UserCover = styled.img`
    width: 100%;

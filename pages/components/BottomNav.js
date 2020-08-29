@@ -24,6 +24,7 @@ export default React.memo(function BottomNav() {
    const pathValue = router?.pathname.replace('/', '');
 
    useEffect(() => {
+      router.prefetch(pathValue === 'me' ? '/' : '/' + pathValue);
       setNavValue(pathValue === 'me' ? '/' + pathValue : '/');
    }, [pathValue]);
 

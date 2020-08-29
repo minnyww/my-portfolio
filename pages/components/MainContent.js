@@ -1,7 +1,12 @@
+import dynamic from 'next/dynamic';
 import Typography from '@material-ui/core/Typography';
-import ContentCard from '../components/ContentCard';
 import styled from 'styled-components';
 import { useRouter } from 'next/router';
+import { useEffect } from 'react';
+
+const ContentCard = dynamic(() => import('../components/ContentCard'), {
+   loading: () => <p>Loadin ContentCard...</p>,
+});
 
 const Image = styled.img`
    max-width: 50%;
@@ -18,6 +23,16 @@ const MainContent = ({ greetingTime }) => {
    const handleOnClickCard = (pid) => {
       router.push(`/project-detail/${pid}`);
    };
+
+   const prefetchAllContent = () => {
+      return PROJECT_LIST.map((project) =>
+         router.prefetch(`/project-detail/${project.pid}`),
+      );
+   };
+
+   useEffect(() => {
+      prefetchAllContent();
+   }, []);
 
    return (
       <div style={{ paddingBottom: '3rem' }}>
