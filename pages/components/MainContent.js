@@ -26,12 +26,15 @@ export default function MainContent({ greetingTime, PROJECT_LIST }) {
    }
 
    const handleOnClickCard = (pid) => {
-      router.push(`/project-detail/${pid}`);
+      router.push('/project-detail/[pid]', `/project-detail/${pid}`);
    };
 
    const prefetchAllContent = () => {
       return PROJECT_LIST.map((project) =>
-         router.prefetch(`/project-detail/${project.pid}`),
+         router.prefetch(
+            `/project-detail/[pid]`,
+            `/project-detail/${project.pid}`,
+         ),
       );
    };
 
